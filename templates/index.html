@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Sản phẩm</h2>
+<div class="products">
+    {% for product in products %}
+        <div class="product">
+            <img src="{{ url_for('static', filename='images/' ~ product.image) }}" alt="{{ product.name }}">
+            <h3>{{ product.name }}</h3>
+            <p>Giá: {{ product.price }} VND</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

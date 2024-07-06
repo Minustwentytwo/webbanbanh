@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banh 4 Banh</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Banh 4 Banh</h1>
+            <nav>
+                <a href="{{ url_for('index') }}">Trang chủ</a>
+                <a href="{{ url_for('login') }}">Đăng nhập</a>
+                <a href="{{ url_for('register') }}">Đăng ký</a>
+            </nav>
+        </header>
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            <p>&copy; 2024 Banh 4 Banh</p>
+            <p>Liên hệ 0123 456 789 </p>
+            <p>Email nguyenduongkhanh113762@gmail.com </p>
+        </footer>
+    </div>
+</body>
+</html>
